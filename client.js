@@ -86,7 +86,13 @@ Ui.GetContext().TeamProp1.Value = { Team: "Blue", Prop: "Deaths" };
 Ui.GetContext().TeamProp2.Value = { Team: "Red", Prop: "Deaths" };
 
 // ��������� ���� � ������� �� �������
-Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);});
+Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);}
+Players.Get("").inventory.Secondary.Value = true;
+Players.Get("").inventory.SecondaryInfinity.Value = true
+Players.Get("").inventory.Main.Value = false;
+Players.Get("").inventory.Melee.Value = false;
+Players.Get("").inventory.Build.Value = false;
+Players.Get("").inventory.Explosive.Value = false
 // ����� �� ����� � �������
 Teams.OnPlayerChangeTeam.Add(function(player){ player.Spawns.Spawn()});
 
