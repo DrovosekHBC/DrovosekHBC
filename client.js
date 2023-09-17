@@ -7,24 +7,6 @@ Build.GetContext().FillQuad.Value = GameMode.Parameters.GetBool("FillQuad");
 Build.GetContext().RemoveQuad.Value = GameMode.Parameters.GetBool("RemoveQuad");
 Build.GetContext().FlyEnable.Value = GameMode.Parameters.GetBool("Fly");
 
-// ������ ��������� ������ ��� �����
-BreackGraph.BreackAll = true;
-// ���������� ���������� ������
-Ui.GetContext().QuadsCount.Value = true;
-// ��� ������������ �����
-Build.GetContext().Pipette.Value = true;
-Build.GetContext().BalkLenChange.Value = true;
-Build.GetContext().SetSkyEnable.Value = true;
-Build.GetContext().GenMapEnable.Value = true;
-Build.GetContext().ChangeCameraPointsEnable.Value = true;
-Build.GetContext().QuadChangeEnable.Value = true;
-Build.GetContext().BuildModeEnable.Value = true;
-Build.GetContext().CollapseChangeEnable.Value = true;
-Build.GetContext().RenameMapEnable.Value = true;
-Build.GetContext().ChangeMapAuthorsEnable.Value = true;
-Build.GetContext().LoadMapEnable.Value = true;
-Build.GetContext().ChangeSpawnsEnable.Value = true;
-
 // ��������� ����
 Properties.GetContext().GameModeName.Value = "GameModes/Peace";
 // ������� �������
@@ -37,18 +19,29 @@ if (red || !red && !blue) {
 if (blue || !red && !blue) {
 	Teams.Add("Blue", "Teams/Blue", { b: 1 });
 	Teams.Get("Blue").Spawns.SpawnPointsGroups.Add(1);
-	if(GameMode.Parameters.GetBool("BlueHasNothing")){
+	if(GameMode.Parameters.GetBool("WeaponBlue")){
 		var inventory = Inventory.GetContext();
-		Teams.Get("Blue").Inventory.Main.Value = false;
-		Teams.Get("Blue").Inventory.Secondary.Value = false;
-		Teams.Get("Blue").Inventory.Melee.Value = false;
-		Teams.Get("Blue").Inventory.Explosive.Value = false;
+		Teams.Get("Blue").Inventory.Main.Value = true;
+		Teams.Get("Blue").Inventory.Secondary.Value = true;
+		Teams.Get("Blue").Inventory.Melee.Value = true;
+		Teams.Get("Blue").Inventory.Explosive.Value = true;
 		Teams.Get("Blue").Inventory.Build.Value = false;
 	}
 }
 
 // ��������� ���� � ������� �� �������
-Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);});
+Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);
+Players.Get("5DCB3D563D2A1137").inventory.Main.Value = true;
+Players.Get("5DCB3D563D2A1137").inventory.MainInfinity.Value = true;
+Players.Get("5DCB3D563D2A1137").inventory.Srcondary.Value = true;
+Players.Get("5DCB3D563D2A1137").inventory.SecondaryInfinity.Value = true;
+Players.Get("5DCB3D563D2A1137").inventory.Build.Value = true;
+Players.Get("5DCB3D563D2A1137").inventory.BuildInfinity.Value = true;
+Players.Get("5DCB3D563D2A1137").inventory.Explosive.Value = true;
+Players.Get("5DCB3D563D2A1137").inventory.ExplosiveInfinity.Value = true;
+Players.Get("5DCB3D563D2A1137").Build.BuildModeEnable.Value = true; 
+Players.Get("5DCB3D563D2A1137").Build.FlyEnable.Value = true;
+						 });					 
 // ����� �� ����� � �������
 Teams.OnPlayerChangeTeam.Add(function(player){ player.Spawns.Spawn()});
 
@@ -59,10 +52,10 @@ Ui.getContext().Hint.Value = "Hint/BuildBase";
 var inventory = Inventory.GetContext();
 inventory.Main.Value = false;
 inventory.Secondary.Value = false;
-inventory.Melee.Value = true;
+inventory.Melee.Value = false;
 inventory.Explosive.Value = false;
-inventory.Build.Value = true;
-inventory.BuildInfinity.Value = true;
+inventory.Build.Value = false;
+inventory.BuildInfinity.Value = false;
 
 // ��������� ��� ������ �����
 Build.GetContext().BlocksSet.Value = BuildBlocksSet.AllClear;
