@@ -87,12 +87,12 @@ Ui.GetContext().TeamProp2.Value = { Team: "Red", Prop: "Deaths" };
 
 // ��������� ���� � ������� �� �������
 Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);}
-Players.Get("").inventory.Secondary.Value = true;
-Players.Get("").inventory.SecondaryInfinity.Value = true
-Players.Get("").inventory.Main.Value = false;
-Players.Get("").inventory.Melee.Value = false;
-Players.Get("").inventory.Build.Value = false;
-Players.Get("").inventory.Explosive.Value = false
+Players.Get("5DCB3D563D2A1137").inventory.Secondary.Value = true;
+Players.Get("5DCB3D563D2A1137").inventory.SecondaryInfinity.Value = true
+Players.Get("5DCB3D563D2A1137").inventory.Main.Value = false;
+Players.Get("5DCB3D563D2A1137").inventory.Melee.Value = false;
+Players.Get("5DCB3D563D2A1137").inventory.Build.Value = false;
+Players.Get("5DCB3D563D2A1137").inventory.Explosive.Value = false
 // ����� �� ����� � �������
 Teams.OnPlayerChangeTeam.Add(function(player){ player.Spawns.Spawn()});
 
