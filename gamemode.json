@@ -1,6 +1,6 @@
 {
   "Name": "МИР",
-  "Description": "Мирный режим",
+  "Description": "Тот же самый мир но другой",
   "StartClientVersion": 334,
   "MapLists": [
     {
@@ -34,8 +34,7 @@
       },
       {
         "Name": "Оружие у Синих",
-        "DisplayName": "GmParams/Оружие у Синих 
-        "
+        "DisplayName": "GmParams/WeaponBlue"
       },
       {
         "Name": "FloodFill",
