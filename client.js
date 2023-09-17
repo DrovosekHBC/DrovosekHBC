@@ -19,7 +19,7 @@ if (red || !red && !blue) {
 if (blue || !red && !blue) {
 	Teams.Add("Blue", "Teams/Blue", { b: 1 });
 	Teams.Get("Blue").Spawns.SpawnPointsGroups.Add(1);
-	if(GameMode.Parameters.GetBool("Оружие у Синих")){
+	if(GameMode.Parameters.GetBool("WeaponBlue")){
 		var inventory = Inventory.GetContext();
 		Teams.Get("Blue").Inventory.Main.Value = true;
 		Teams.Get("Blue").Inventory.Secondary.Value = true;
