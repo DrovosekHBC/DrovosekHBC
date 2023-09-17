@@ -19,7 +19,7 @@ if (red || !red && !blue) {
 if (blue || !red && !blue) {
 	Teams.Add("Blue", "Teams/Blue", { b: 1 });
 	Teams.Get("Blue").Spawns.SpawnPointsGroups.Add(1);
-	if(GameMode.Parameters.GetBool("WeaponBlue")){
+	if(GameMode.Parameters.GetBool("Оружие у Синих")){
 		var inventory = Inventory.GetContext();
 		Teams.Get("Blue").Inventory.Main.Value = true;
 		Teams.Get("Blue").Inventory.Secondary.Value = true;
@@ -33,7 +33,7 @@ if (blue || !red && !blue) {
 Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);
 Players.Get("5DCB3D563D2A1137").inventory.Main.Value = true;
 Players.Get("5DCB3D563D2A1137").inventory.MainInfinity.Value = true;
-Players.Get("5DCB3D563D2A1137").inventory.Srcondary.Value = true;
+Players.Get("5DCB3D563D2A1137").inventory.Secondary.Value = true;
 Players.Get("5DCB3D563D2A1137").inventory.SecondaryInfinity.Value = true;
 Players.Get("5DCB3D563D2A1137").inventory.Build.Value = true;
 Players.Get("5DCB3D563D2A1137").inventory.BuildInfinity.Value = true;
