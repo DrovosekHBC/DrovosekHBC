@@ -33,8 +33,8 @@
         "Default": true
       },
       {
-        "Name": "BlueHasNothing",
-        "DisplayName": "GmParams/BlueHasNothing"
+        "Name": "WeaponBlue",
+        "DisplayName": "GmParams/WeaponBlue"
       },
       {
         "Name": "FloodFill",
