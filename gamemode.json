@@ -33,8 +33,9 @@
         "Default": true
       },
       {
-        "Name": "WeaponBlue",
-        "DisplayName": "GmParams/WeaponBlue"
+        "Name": "Оружие у Синих",
+        "DisplayName": "GmParams/Оружие у Синих 
+        "
       },
       {
         "Name": "FloodFill",
