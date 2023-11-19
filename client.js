@@ -216,7 +216,7 @@ function SpawnTeams() {
 	while (e.moveNext()) {
 		Spawns.GetContext(e.Current).Spawn();
 contextedProperties.GetContext().MaxHp.Value = 1; 
-contextedProperties.GetContext().SkinType.Value = 2;
+contextedProperties.GetContext().SkinType.Value = 1;
 	}
 }
 
