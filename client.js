@@ -215,6 +215,8 @@ function SpawnTeams() {
 	var e = Teams.GetEnumerator();
 	while (e.moveNext()) {
 		Spawns.GetContext(e.Current).Spawn();
+contextedProperties.GetContex().MaxHp = 1; 
+contextedProperties.GetContex().SkinType = 2;
 	}
 }
 
