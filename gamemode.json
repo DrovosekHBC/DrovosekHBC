@@ -1,7 +1,7 @@
 
 {
-  "Name": "TDM all 1 HP",
-  "Description": "ТДМ но увсех 1 хп и другой скин",
+  "Name": "The Last Waffentrager",
+  "Description": "Последний в свом роде, даже будет немного жалко",
   "StartClientVersion": 334,
   "MapFilter": {
     "IsBlank": false,
